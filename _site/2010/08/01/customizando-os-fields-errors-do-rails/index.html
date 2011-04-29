@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="author" content="Rodrigo Pinto - RodrigoPinto.me" />
+<meta name="design" content="Erwin Aligam - styleshout.com" />
+<meta name="description" content="Personal Blog to Description Here" />
+<meta name="keywords" content="Rodrigo Pinto, Ruby, Rails, software d here" />
+<meta name="robots" content="index, follow, noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+<title>Customizando os Fields Errors do Rails</title>
+
+<style type="text/css" media="all">
+	@import "/static/css/screen.css";
+</style>
+
+</head>
+
+<body>
+
+<!--header -->
+<div id="header-wrap"><div id="header">
+
+	<a name="top"></a>
+
+	<h1 id="logo-text"><a href="/" title="">Rodrigo Pinto</a></h1>
+	<p id="slogan"></p>
+
+	<div  id="nav">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="sobre.html">Sobre/About</a></li>
+		</ul>
+	</div>
+
+   <p id="rss">
+      <a href="/atom.xml"></a>
+   </p>
+
+   
+
+<!--/header-->
+</div></div>
+	
+<!-- content-outer -->
+<div id="content-wrap" class="clear" >
+
+	<!-- content -->
+   <div id="content">
+
+	<!-- main -->
+		<div id="main">
+   	 		<div class="post">
+
+	<div class="right">
+
+    	<h2><a href="/2010/08/01/customizando-os-fields-errors-do-rails">Customizando os Fields Errors do Rails</a></h2>
+		
+       	<p class="post-info">On August 01, 2010</p>
+
+		<p>Quem desenvolve com <strong><a href="http://rubyonrails.org/">Ruby on Rails</a></strong>, sabe que esta é uma ferramenta muito poderosa para desenvolvimento web. Mas como todo framework, que te fornece uma estrutura básica, e a partir dai faz as customizações necessárias, que por sinal é tão simples como o uso do framework.</p>
+
+<p>Uma necessidade comum é adaptar o formato de saída das mensagens de erro das validações de formulários, para o estilo de cada projeto.</p>
+
+<p>O padrão gerado pelo <strong>Rails</strong> é como o a seguir:</p>
+
+<p><img src="http://farm5.static.flickr.com/4125/4846589232_64d788ea98.jpg" width="435" height="402" alt="Default error message" title="default error message" /></p>
+
+<p>Porém, é necessério adaptá-lo para um formato que atenda a necessidade do seu projeto e isto é muito muito simples, veja no exemplo abaixo já alterado.</p>
+
+<p><img src="http://farm5.static.flickr.com/4145/4846589304_dfd006acec.jpg" width="500" height="333" alt="custom error message" title="custom error message"/></p>
+
+<p>Interessante não?
+A mensagem é exibida ao lado do <em>label</em> do campo, e a borda do campo fica marca na cor vermelha. E o melhor de tudo é que é muito simples de se fazer esta alteração.
+No arquivo <strong>config/enviroment.rb</strong>, vá até o final do arquivo e adicione este trecho de código.</p>
+
+<script src="http://gist.github.com/479961.js"> </script>
+
+
+<p></p>
+
+<p>Para que tudo funcione corretamente, você precisa da gem <strong><a href="http://github.com/hpricot/hpricot">Hpricot</a></strong> que é um parser <strong>html</strong>, que utilizaremos para fazer a busca no <strong>html</strong> gerado pelo rails para inserir dinâmicamente o css.</p>
+
+<p>Já o css fica por sua conta, eu mantive os gerados pelo <strong>Rails</strong>.</p>
+
+<p><strong>[UPDATE]</strong></p>
+
+<p>Como o <strong><a href="http://twitter.com/caike">Caike</a></strong> falou no comentário, uma outra forma de customizar os Fields Errors, é herdando o <strong>ActionView::Helpers::FormBuilder</strong>, assim você tem acesso ao model em questão para verificar a existência de erros e fazer as adaptações necessárias.
+Mediante esta dica, resolvi fazer esta implementação para comparar as diferenças, vejamos então.</p>
+
+<p>No diretório <strong>lib</strong> da sua aplicação crie um arquivo ruby, eu o chamei de <strong>lib/customized_error_form_builder.rb</strong>, e adicione o código a seguir:</p>
+
+<script src="http://gist.github.com/503552.js"> </script>
+
+
+<p>O próximo passo é fazer o seu form usar o <strong>FormBuilder</strong> customizado, e para isso existem duas formas.</p>
+
+<p>Uma delas é adicionando ao seu  <strong>config/enviroment.rb</strong>  o código a seguir, e notem que eu comentei as linhas anteriormente adicionadas.</p>
+
+<script src="http://gist.github.com/503566.js"> </script>
+
+
+<p>Fazendo da forma acima todos os formulários da aplicação farão uso do seu <strong>FormBuilder</strong> customizado, porém se quiser que apenas um formulário específico faça uso dele, desconsidere o código acima e apenas adicione ao seu <strong>form_for</strong> o builder, veja como ficaria seu form:</p>
+
+<script src="http://gist.github.com/503571.js"> </script>
+
+
+<p>Após executar a aplicação é possível reparar que o resultado é o mesmo da primeira custimozação feita neste post, porém a quantidade de código escrito é muito maior e não cobre todas as situações, se repararmos no nosso arquivo <strong>lib/customized_error_form_builder.rb</strong> ele implementa apenas os método para label e text_field, não cobrindo outros campos do <strong>form_for</strong>.</p>
+
+<p>Particularmente <strong>e</strong> para este tipo de situação eu utilizaria a primeira implementação, porém, é importante conhecer melhor sobre <strong>ActionView::Helpers::FormBuilder</strong>, pois pode ser útil para seus projetos ou da sua empresa, no caso de ter uma implementação própria para os formulários dos seus projetos. A gem <strong><a href="http://github.com/justinfrench/formtastic">formtastic</a></strong> é um exemplo de onde a herança do  <strong>ActionView::Helpers::FormBuilder</strong> foi aplicada para ter um melhor resultado.</p>
+
+<p>Até, mais e abraços;</p>
+
+
+
+    </div>
+
+    <div class="left">
+
+    	<p class="dateinfo">Aug<span>01</span></p>
+
+       	<div class="post-meta">
+          	<h4>Post Info</h4>
+             	<ul>
+                   <li class="comment"><a href="#">2 Comments</a></li>
+                   <li class="permalink"><a href="#">Permalink</a></li>
+                </ul>
+				</div>
+
+    </div>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		var disqus_developer = 1; // developer mode is on	
+	
+    	var disqus_shortname = 'rodrigopinto'; // required: replace example with your forum shortname
+
+    	// The following are highly recommended additional parameters. Remove the slashes in front to use.
+    	// var disqus_identifier = 'unique_dynamic_id_1234';
+		// var disqus_url       = 'http://example.com/permalink-to-page.html';
+
+    	/* * * DON'T EDIT BELOW THIS LINE * * */
+    	(function() {
+        	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        	dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+		</div>
+	<!-- /main -->
+      <!-- sidebar -->
+		<div id="sidebar">
+
+      	<div class="about-me">
+
+         	<h3>About Me</h3>
+		      <p>
+				<a href='#'>
+					<img src='http://www.gravatar.com/avatar/de89dceb54a28b2aa952663cc94d60fc?s=40' height='40' width='40' class='float-left' />
+					</a> 
+				Sou um desenvolvedor de software
+				apaixonado, tentando melhorar a forma como se faz
+				software através de pensamentos e ideias,
+				em forma de
+				<b> <a href='http://smallactsmanifesto.org'> Small Acts.</a> </b>
+		      
+				</p>
+
+         </div>
+
+			<div class="sidemenu">
+
+				<h3>Sidebar Menu</h3>
+            <ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#TemplateInfo">TemplateInfo</a></li>
+					<li><a href="style.html">Style Demo</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="archives.html">Archives</a></li>
+					<li><a href="http://www.dreamtemplate.com" title="Web Templates">Web Templates</a></li>
+				</ul>
+
+			</div>
+
+			<div class="sidemenu">
+
+				<h3>Sponsors</h3>
+            <ul>
+					<li><a href="http://www.dreamtemplate.com" title="Website Templates">DreamTemplate <br />
+	            	<span>Over 6,000+ Premium Web Templates</span></a>
+	            </li>
+					<li><a href="http://www.themelayouts.com" title="WordPress Themes">ThemeLayouts <br />
+	            	<span>Premium WordPress &amp; Joomla Themes</span></a>
+	            </li>
+					<li><a href="http://www.imhosted.com" title="Website Hosting">ImHosted.com <br />
+	            	<span>Affordable Web Hosting Provider</span></a>
+	            </li>
+					<li><a href="http://www.dreamstock.com" title="Stock Photos">DreamStock <br />
+	            	<span>Download Amazing Stock Photos</span></a>
+	            </li>
+					<li><a href="http://www.evrsoft.com" title="Website Builder">Evrsoft <br />
+	            	<span>Website Builder Software &amp; Tools</span></a>
+	            </li>
+					<li><a href="http://www.webhostingwp.com" title="Web Hosting">Web Hosting <br />
+	            	<span>Top 10 Hosting Reviews</span></a>
+	            </li>
+				</ul>
+
+			</div>
+
+         <div class="popular">
+
+				<h3>Most Popular</h3>
+				<ul>
+			   	<li><a href="index.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+						<br /><span>Posted on December 22, 2010</span>
+					</li>
+               <li><a href="index.html">Cras fringilla magna. Phasellus suscipit.</a>
+						<br /><span>Posted on December 20, 2010</span>
+					</li>
+               <li><a href="index.html">Morbi tincidunt, orci ac convallis aliquam.</a>
+						<br /><span>Posted on December 15, 2010</span>
+					</li>
+               <li><a href="index.html">Ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+						<br /><span>Posted on December 14, 2010</span>
+					</li>
+               <li><a href="index.html">Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem</a>
+						<br /><span>Posted on December 12, 2010</span>
+					</li>
+				</ul>
+
+			</div>
+
+      <!-- /sidebar -->
+		</div>
+
+    <!-- content -->
+	</div>
+
+<!-- /content-out -->
+</div>
+		
+<!-- footer-outer -->
+<div id="footer-outer" class="clear"><div id="footer-wrap">
+
+	<div id="gallery" class="clear">
+
+		<h3>Flickr Photos </h3>
+
+		<p class="thumbs">
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+         <a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			<a href="index.html"><img src="/images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+      </p>
+
+    </div>
+
+	 <div class="col-a">
+
+		<h3>Contact Info</h3>
+
+		<p>
+		<strong>Phone: </strong>+1234567<br/>
+		<strong>Fax: </strong>+123456789
+		</p>
+
+		<p><strong>Address: </strong>123 Put Your Address Here</p>
+        <p><strong>E-mail: </strong>me@coolblue.com</p>
+		<p>Want more info - go to our <a href="#">contact page</a></p>
+
+      <h3>Updates</h3>
+
+      <ul class="subscribe-stuff">
+      	<li><a title="RSS" href="index.html" rel="nofollow">
+				<img alt="RSS" title="RSS" src="/images/social_rss.png" /></a>
+			</li>
+      	<li><a title="Facebook" href="index.html" rel="nofollow">
+				<img alt="Facebook" title="Facebook" src="/images/social_facebook.png" /></a>
+			</li>
+			<li><a title="Twitter" href="index.html" rel="nofollow">
+				<img alt="Twitter" title="Twitter" src="/images/social_twitter.png" /></a>
+			</li>
+			<li><a title="E-mail this story to a friend!" href="index.html" rel="nofollow">
+				<img alt="E-mail this story to a friend!" title="E-mail this story to a friend!" src="/images/social_email.png" /></a>
+			</li>
+      </ul>
+
+      <p>Stay up to date. Subscribe via
+		<a href="index">RSS</a>, <a href="index">Facebook</a>,
+		<a href="index">Twitter</a> or <a href="index">Email</a>
+		</p>
+
+	</div>
+
+	<div class="col-a">
+
+   	<h3>Site Links</h3>
+
+		<div class="footer-list">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">Style Demo</a></li>
+				<li><a href="index.html">Blog</a></li>
+				<li><a href="index.html">Archive</a></li>
+				<li><a href="index.html">About</a></li>
+				<li><a href="index.html">Template Info</a></li>
+				<li><a href="index.html">Site Map</a></li>
+			</ul>
+		</div>
+
+      <h3>Friends</h3>
+
+		<div class="footer-list">
+			<ul>
+				<li><a href="index.html">consequat molestie</a></li>
+				<li><a href="index.html">sem justo</a></li>
+				<li><a href="index.html">semper</a></li>
+				<li><a href="index.html">magna sed purus</a></li>
+				<li><a href="index.html">tincidunt</a></li>
+				<li><a href="index.html">consequat molestie</a></li>
+				<li><a href="index.html">magna sed purus</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+   <div class="col-a">
+
+      <h3>Credits</h3>
+
+      <div class="footer-list">
+			<ul>
+				<li><a href="http://jasonlarose.com/blog/110-free-classy-social-media-icons">
+						110 Free Classy Social Media Icons by Jason LaRose
+				    </a>
+				</li>
+            <li><a href="http://wefunction.com/2009/05/free-social-icons-app-icons/">
+						Free Social Media Icons by WeFunction
+				    </a>
+				</li>
+            <li><a href="http://www.famfamfam.com/lab/icons/">
+						Free Icons by FAMFAMFAM
+				    </a>
+				</li>
+			</ul>
+		</div>
+
+      <h3>Recent Comments</h3>
+
+	   <div class="recent-comments">
+         <ul>
+			<li><a href="index.html" title="Comment on title">Whoa! This one is really cool...</a><br /> &#45; <cite>Erwin</cite></li>
+			<li><a href="index.html" title="Comment on title">Wow. This theme is really awesome...</a><br /> &#45; <cite>John Doe</cite></li>
+			<li><a href="index.html" title="Comment on title">Type your comment here...</a><br />&#45; <cite>Naruto</cite></li>
+			<li><a href="index.html" title="Comment on title">And don't forget this theme is free...</a><br /> &#45; <cite>Shikamaru</cite></li>
+         <li><a href="index.html" title="Comment on title">Just a simple reply test. Thanks...</a><br /> &#45; <cite>ABCD</cite></li>
+			</ul>
+		</div>
+
+   </div>
+
+   <div class="col-b">
+
+      <h3>Archives</h3>
+
+	   <div class="footer-list">
+			<ul>
+				<li><a href="index.html">January 2010</a></li>
+				<li><a href="index.html">December 2009</a></li>
+				<li><a href="index.html">November 2009</a></li>
+				<li><a href="index.html">October 2009</a></li>
+				<li><a href="index.html">September 2009</a></li>
+			</ul>
+		</div>
+
+      <h3>Recent Bookmarks</h3>
+
+	   <div class="footer-list">
+			<ul>
+				<li><a href="index.html">5 Must Have Sans Serif Fonts for Web Designers</a></li>
+				<li><a href="index.html">The Basics of CSS3</a></li>
+				<li><a href="index.html">10 Simple Tips for Launching a Website</a></li>
+				<li><a href="index.html">24 ways: Working With RGBA Colour</a></li>
+				<li><a href="index.html">30 Blog Designs with Killer Typography</a></li>
+				<li><a href="index.html">The Principles of Great Design</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+<!-- /footer-outer -->
+</div></div>
+
+<!-- footer-bottom -->
+<div id="footer-bottom">
+
+	<p class="bottom-left">
+		&copy; 2010 <strong>Copyright Rodrigo Pinto</strong>&nbsp; &nbsp; &nbsp;
+		<a href="http://www.bluewebtemplates.com/" title="Website Templates">website templates</a> by <a href="http://www.styleshout.com/">styleshout</a>
+	</p>
+
+	<p class="bottom-right">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+	   <a href="http://validator.w3.org/check/referer">XHTML</a>	|
+		<a href="/">Home</a> |
+		<a href="index.html">RSS Feed</a> |
+      <strong><a href="#top">Back to Top</a></strong>
+   </p>
+
+<!-- /footer-bottom-->
+</div>
+
+</body>
+</html>

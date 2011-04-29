@@ -1,0 +1,6 @@
+title: Rodrigo Pinto
+permalink: /:year/:month/:day/:title
+markdown: rdiscount
+pygments: true
+exclude:
+  README.md
