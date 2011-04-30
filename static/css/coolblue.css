@@ -900,4 +900,8 @@ ul.archive li .post-details a:visited {
 	clear:both;
 	height:0;
 	content: " ";
-}  
+}
+
+.disqus_block{
+	margin: 0 15px 0 15px;
+}

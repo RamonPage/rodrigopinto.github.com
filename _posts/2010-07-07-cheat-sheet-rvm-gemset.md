@@ -13,13 +13,13 @@ Para fazer a instalação do **RVM** confira em **[RVM install](http://rvm.begin
 
 ###Instalando uma versão do ruby no RVM
 
-rvm install *<versão-ruby>*
+rvm install <versão-ruby>
 	
 ex: rvm install 1.8.7, ree
 
 ###Definindo a versão do ruby
 
-rvm *<versão-ruby>*
+rvm <versão-ruby>
 	
 ex: rvm ree
 
@@ -55,7 +55,7 @@ ex:  touch ~/projetos/meu_projeto/.rmvrc
 
 **Colocar a versão do ruby com a gemset específica**
 
-echo "rvm ree@meu_projeto" > ~/projects/seu_projeto/.rvmrc
+echo "rvm use ree@meu_projeto" > ~/projects/seu_projeto/.rvmrc
 
 
 É isso ai,
