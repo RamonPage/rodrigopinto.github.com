@@ -1,1 +1,1 @@
-rvm use ree@rodrigopinto
+rvm use ree@rodrigopinto --create
