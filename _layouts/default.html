@@ -1,188 +1,120 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="author" content="Rodrigo Pinto - RodrigoPinto.me" />
-<meta name="design" content="Erwin Aligam - styleshout.com" />
-<meta name="description" content="Personal Blog to Description Here" />
-<meta name="keywords" content="Rodrigo Pinto, Ruby, Rails, software d here" />
-<meta name="robots" content="index, follow, noarchive" />
-<meta name="googlebot" content="noarchive" />
-
-<title>{{ page.title }}</title>
-
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+	<meta name="author" content="Rodrigo Pinto - RodrigoPinto.me" />
+	<meta name="design" content="Erwin Aligam - styleshout.com" />
+	<meta name="description" content="Personal Blog to Description Here" />
+	<meta name="keywords" content="Rodrigo Pinto, Ruby, Rails, software d here" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="googlebot" content="noarchive" />
+	<title>Rodrigo Pinto - {{ page.title }}</title>
 <style type="text/css" media="all">
-	@import "/static/css/screen.css";
+  @import "/static/css/screen.css";
 </style>
 
 </head>
 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-13130320-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
 <body>
+<div id="header-wrap">
+	<div id="header">
+		<a name="top"></a>
 
-<!--header -->
-<div id="header-wrap"><div id="header">
-
-	<a name="top"></a>
-
-	<h1 id="logo-text"><a href="/" title="">Rodrigo Pinto</a></h1>
-	<p id="slogan"></p>
-
-	<div  id="nav">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="sobre.html">Sobre/About</a></li>
-		</ul>
+	  <h1 id="logo-text"><a href="/" title="">Rodrigo Pinto</a></h1>
+	  <p id="slogan"></p>
+		<div  id="nav">
+	    <ul>
+	      <li><a href="/">Home</a></li>
+	      <li><a href="/sobre.html">About</a></li>
+	    </ul>
+	  </div>
+		<p id="rss">
+	  	<a href="/atom.xml"></a>
+	  </p>
 	</div>
-
-   <p id="rss">
-      <a href="/atom.xml"></a>
-   </p>
-
-   
-
-<!--/header-->
-</div></div>
-	
-<!-- content-outer -->
-<div id="content-wrap" class="clear" >
-
-	<!-- content -->
-   <div id="content">
-
-	<!-- main -->
-		<div id="main">
-   	 		{{ content }}
-		</div>
-	<!-- /main -->
-      <!-- sidebar -->
-		<div id="sidebar">
-
-      	<div class="about-me">
-
-         	<h3>About Me</h3>
-		      <p>
-				<a href='#'>
-					<img src='http://www.gravatar.com/avatar/de89dceb54a28b2aa952663cc94d60fc?s=40' height='40' width='40' class='float-left' />
-					</a> 
-				Sou um desenvolvedor de software
-				apaixonado, tentando melhorar a forma como se faz
-				software através de pensamentos e ideias,
-				em forma de
-				<b> <a href='http://smallactsmanifesto.org'> Pequenas Ações.</a> </b>
-		      
-				</p>
-
-         </div>
-
-			<div class="sidemenu">
-
-				<h3>#Horaextra</h3>
-            	<ul>
-					<li><a href="http://metronus.com/blog/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">André Fonseca</a></li>
-					  <li><a href="http://caikesouza.com/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Caike Souza</a></li>
-					  <li><a href="http://diegodukao.net/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Diego Dukão</a></li>
-					  <li><a href="http://blog.distopico.org/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Edgard Arakaki</a></li>
-					  <li><a href="http://gc.blog.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Guilherme Chapiewski</a></li>
-					  <li><a href="http://henriquebastos.net/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Henrique Bastos</a></li>
-					  <li><a href="http://tapajos.me/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Marcos Tapajós</a></li>
-					  <li><a href="http://mariomariani.blogspot.com/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Mário Mariani</a></li>
-					  <li><a href="http://rafael.adm.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Rafael Lima</a></li>
-					  <li><a href="http://rafael.tauil.com.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Rafael Tauil</a></li>
-					  <li><a href="http://ramonpage.com/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Ramon Bispo</a></li>
-					  <li><a href="http://mergulhao.info/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Sylvestre Mergulhão</a></li>
-					  <li><a href="http://vp.blog.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Vitor Pellegrino</a></li>
-				</ul>
-
-			</div>
-
-
-      <!-- /sidebar -->
-		</div>
-
-    <!-- content -->
-	</div>
-
-<!-- /content-out -->
 </div>
-		
-<!-- footer-outer -->
-<div id="footer-outer" class="clear"><div id="footer-wrap">
-	
-	<div class="col-a">
-      
+
+<div id="content-wrap" class="clear" >
+  <div id="content">
+		<div id="main">
+        {{ content }}
+    </div>
+
+		<div id="sidebar">
+      <div class="about-me">
+				<h3>About Me</h3>
+        	<p>
+        		<a href='#'>
+          		<img src='http://www.gravatar.com/avatar/de89dceb54a28b2aa952663cc94d60fc?s=40' height='40' width='40' rel="nofollow" class='float-left' />
+          	</a>
+						Sou um desenvolvedor de software apaixonado, tentando melhorar a forma como se faz software através de pensamentos e ideias, em forma de <strong><a href='http://smallactsmanifesto.org' rel="nofollow"> Small Acts.</a></strong>
+        </p>
+			</div>
+			<div class="sidemenu">
+  			<h3>#Horaextra</h3>
+              <ul>
+          <li><a href="http://metronus.com/blog/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">André Fonseca</a></li>
+            <li><a href="http://caikesouza.com/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Caike Souza</a></li>
+            <li><a href="http://diegodukao.net/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Diego Dukão</a></li>
+            <li><a href="http://blog.distopico.org/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Edgard Arakaki</a></li>
+            <li><a href="http://gc.blog.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Guilherme Chapiewski</a></li>
+            <li><a href="http://henriquebastos.net/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Henrique Bastos</a></li>
+            <li><a href="http://tapajos.me/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Marcos Tapajós</a></li>
+            <li><a href="http://mariomariani.blogspot.com/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Mário Mariani</a></li>
+            <li><a href="http://rafael.adm.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Rafael Lima</a></li>
+            <li><a href="http://rafael.tauil.com.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Rafael Tauil</a></li>
+            <li><a href="http://ramonpage.com/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Ramon Bispo</a></li>
+            <li><a href="http://mergulhao.info/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Sylvestre Mergulhão</a></li>
+            <li><a href="http://vp.blog.br/?utm_source=horaextra.org&amp;utm_medium=affiliate&amp;utm_content=textlink&amp;utm_campaign=horaextra">Vitor Pellegrino</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div id="footer-outer" class="clear"><div id="footer-wrap">
+	  <div class="col-a"></div>
+	  <div class="col-a">
+	    <h3>Keep in Touch</h3>
+			<ul class="subscribe-stuff">
+	    	<li>
+	        <a title="RSS" href="index.html" rel="nofollow">
+	          <img alt="RSS" title="RSS" src="/images/social_rss.png" />
+	        </a>
+	      </li>
+	      <li>
+	      	<a title="Twitter" href="http://twitter.com/rodrigoospinto" rel="nofollow">
+	          <img alt="Twitter" title="Twitter" src="/images/social_twitter.png" />
+	      	</a>
+	      </li>
+	      <li>
+	        <a title="E-mail this story to a friend!" href="index.html" rel="nofollow">
+	          <img alt="E-mail this story to a friend!" title="E-mail this story to a friend!" src="/images/social_email.png" />
+	        </a>
+	      </li>
+			</ul>
+		</div>
+		<div class="col-a"></div>
+		<div class="col-b"></div>
 	</div>
+</div>
 
-	<div class="col-a">
-		<h3>Keep in Touch</h3>
-
-	      <ul class="subscribe-stuff">
-	      	<li>
-				<a title="RSS" href="index.html" rel="nofollow">
-					<img alt="RSS" title="RSS" src="/images/social_rss.png" />
-				</a>
-			</li>
-			<li>
-				<a title="Twitter" href="http://twitter.com/rodrigoospinto" rel="nofollow">
-					<img alt="Twitter" title="Twitter" src="/images/social_twitter.png" />
-					</a>
-			</li>
-			<li>
-				<a title="E-mail this story to a friend!" href="index.html" rel="nofollow">
-					<img alt="E-mail this story to a friend!" title="E-mail this story to a friend!" src="/images/social_email.png" />
-				</a>
-			</li>
-				
-	      </ul>
-	
-	</div>
-
-   <div class="col-a">
-
-   </div>
-
-   <div class="col-b">
-
-	</div>
-
-<!-- /footer-outer -->
-</div></div>
-
-<!-- footer-bottom -->
 <div id="footer-bottom">
+  <p class="bottom-left">
+    &copy; 2010 <strong>Copyright Rodrigo Pinto</strong>&nbsp; &nbsp; &nbsp;
+    <a href="http://www.bluewebtemplates.com/" title="Website Templates">website templates</a> by <a href="http://www.styleshout.com/">styleshout</a>
+  </p>
 
-	<p class="bottom-left">
-		&copy; 2010 <strong>Copyright Rodrigo Pinto</strong>&nbsp; &nbsp; &nbsp;
-		<a href="http://www.bluewebtemplates.com/" title="Website Templates">website templates</a> by <a href="http://www.styleshout.com/">styleshout</a>
-	</p>
-
-	<p class="bottom-right">
-		<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
-	   <a href="http://validator.w3.org/check/referer">XHTML</a>	|
-		<a href="/">Home</a> |
-		<a href="index.html">RSS Feed</a> |
+  <p class="bottom-right">
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+     <a href="http://validator.w3.org/check/referer">XHTML</a>  |
+    <a href="/">Home</a> |
+    <a href="index.html">RSS Feed</a> |
       <strong><a href="#top">Back to Top</a></strong>
    </p>
-
-<!-- /footer-bottom-->
 </div>
-
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'rodrigopinto'; // required: replace example with your forum shortname
@@ -196,5 +128,17 @@
     }());
 </script>
 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-13130320-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>

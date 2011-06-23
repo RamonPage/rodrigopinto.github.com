@@ -1,6 +1,5 @@
-title: Rodrigo Pinto
+server: true
+auto: true
 permalink: /:year/:month/:day/:title
 markdown: rdiscount
-pygments: true
-exclude:
-  README.md
+exclude: ['Rakefile', 'README', 'Gemfile', 'Gemfile.lock', 'config.rb']
