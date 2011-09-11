@@ -366,6 +366,7 @@ fieldset.search {
 }
 #sidebar img { padding: 8px; }
 
+#sidebar .social img { background: none; border: 0; padding: 0px; }
 
 /* sidemenu */
 .sidemenu ul {
