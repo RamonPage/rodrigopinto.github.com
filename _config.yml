@@ -1,5 +1,5 @@
 server: true
 auto: true
-permalink: /:year/:month/:day/:title
+permalink: :pretty
 markdown: rdiscount
 exclude: ['Rakefile', 'README', 'Gemfile', 'Gemfile.lock', 'config.rb']

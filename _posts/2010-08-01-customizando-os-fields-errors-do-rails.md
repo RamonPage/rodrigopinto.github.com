@@ -1,8 +1,6 @@
 --- 
 layout: post
 title: Customizando os Fields Errors do Rails
-categories: rubyonrails, dica, ruby, rails
-enki_id: 6
 ---
 
 Quem desenvolve com **[Ruby on Rails](http://rubyonrails.org/)**, sabe que esta é uma ferramenta muito poderosa para desenvolvimento web. Mas como todo framework, que te fornece uma estrutura básica, e a partir dai faz as customizações necessárias, que por sinal é tão simples como o uso do framework.

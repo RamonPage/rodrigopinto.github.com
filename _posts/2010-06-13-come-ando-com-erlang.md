@@ -1,8 +1,6 @@
 --- 
 layout: post
-title: "Come\xC3\xA7ando com Erlang"
-categories: "erlang, forkinrio, programação_funcional"
-enki_id: 4
+title: "Começando com Erlang"
 ---
 
 Na última semana, dei o ponta pé inicial nos estudos sobre **[Erlang](http://www.erlang.org)**, para ser mais preciso na terça-feira dia 01/06/2010. Faz algum tempo que estou interessado em aprender um pouco sobre **[programação funcional](http://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional )**, porém estava sempre colocando outras  *"prioridades"* em primeiro lugar e não conseguia o tempo necessário para iniciar os estudos. 

@@ -1,8 +1,6 @@
 --- 
 layout: post
 title: Palestra sobre Software Livre e Comunidade
-categories: palestra, softwarelivre, comunidade
-enki_id: 2
 ---
 
 Nos últimos dias estive envolvido junto com o *[resto](http://pythonrio.org) [da](http://dojorio.org) [turma](http://horaextra.org)* na produção da [PythonCampus](http://pythoncampus.org), o que tem me levado algumas horas do dia..

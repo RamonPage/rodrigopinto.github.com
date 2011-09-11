@@ -1,8 +1,6 @@
 --- 
 layout: post
 title: "[Cheat Sheet] RVM +Gemset"
-categories: cheat_sheet, rvm, gemset, ruby
-enki_id: 5
 ---
 
 Após fazer uma "limpeza" no meu ambiente ruby utilizando o **[RVM](http://rvm.beginrescueend.com/rvm/)** que Ã?Â© um  gerenciador de **rubies**  e a **[Gemset](http://rvm.beginrescueend.com/gemsets/)** que o gerenciador de diretórios de gems do **RVM**. 

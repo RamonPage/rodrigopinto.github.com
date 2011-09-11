@@ -1,8 +1,6 @@
 --- 
 layout: post
 title: Bem vindo a casa
-categories: bemvindo, smallacts
-enki_id: 1
 ---
 
 Há algum tempo, venho postergando a idéia de criar um blog. No início era a desculpa de que não saberia o que escrever, depois foi o fato de "não ter tempo", e por fim a falta de priorização no meu dia a dia. 

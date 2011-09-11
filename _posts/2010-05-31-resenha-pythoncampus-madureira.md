@@ -1,8 +1,6 @@
 --- 
 layout: post
 title: Resenha PythonCampus Madureira
-categories: pythoncampus, evento, python, palestra
-enki_id: 3
 ---
 
 No último sábado dia 29/05/2010, mais uma edição da **[PythonCampus](http://pythoncampus.org)** foi realizada, desta vez a universidade que sediou o evento foi a Estácio, no campus de Madureira.
