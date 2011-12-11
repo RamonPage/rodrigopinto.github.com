@@ -1,5 +1,6 @@
-server: true
-auto: true
-permalink: :pretty
-markdown: rdiscount
+server:     true
+auto:       true
+permalink:  :pretty
+markdown:   rdiscount
+pygments:   true
 exclude: ['Rakefile', 'README', 'Gemfile', 'Gemfile.lock', 'config.rb']

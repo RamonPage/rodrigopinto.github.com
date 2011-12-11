@@ -11,7 +11,7 @@
     G E N E R A L
 --------------------------------------------------------------------------------- */
 body {
-	font: 12px/170% 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+	font: 13px/170% 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
 	color: #777;
 	margin: 0; padding: 0;
 	background: url(/images/bg.jpg);
@@ -348,7 +348,7 @@ fieldset.search {
 }
 
 #main h2 {
-	font: bold 3.2em/1em 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+	font: bold 2.2em/1em 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
    color: #333;
 	letter-spacing: -2.0px;
 	margin-bottom: 0;
@@ -601,16 +601,16 @@ ul.subscribe-stuff li img {
    border-bottom: 1px solid #eee;
 }
 .right {
-	width: 560px;
-   float: right;
-   display: inline;
-   padding-right: 15px;
+	width: 710px;
+  float: right;
+  display: inline;
+  padding-right: 15px;
 }
 .left {
     position: relative;
     width: 150px;
     float: right;
-    display: inline;
+    display: none;
 }
 .right .image-section {
 	clear: both;
