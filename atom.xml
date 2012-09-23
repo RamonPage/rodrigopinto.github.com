@@ -3,16 +3,16 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>RodrigoPinto.me</title>
+  <title>Rodrigo Pinto</title>
   <link type="application/atom+xml" rel="self" href="http://rodrigopinto.me/atom.xml"/>
   <link href="http://rodrigopinto.me/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://RodrigoPinto.me/</id>
+  <id>http://rodrigopinto.me/</id>
   <author>
     <name>Rodrigo Pinto</name>
     <email>rodrigopqn@gmail.com</email>
   </author>
- 
+
   {% for post in site.posts %}
   <entry>
     <id>http://rodrigopinto.me{{ post.id }}</id>
@@ -22,6 +22,7 @@ layout: nil
     <author>
       <name>Rodrigo Pinto</name>
       <email>rodrigopqn@gmail.com</email>
+      <uri>http://rodrigopinto.me/</uri>
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
