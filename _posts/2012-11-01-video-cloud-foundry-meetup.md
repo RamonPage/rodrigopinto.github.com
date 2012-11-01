@@ -12,7 +12,7 @@ No início do mês o [Tapajós](http://twitter.com/tapajos) anunciou na lista do
 
 Sendo assim, juntei a fome com a vontade de comer e assumi a responsabilidade de organizar um meetup com o [Martin Englund][1] para ele falar sobre o [Cloud Foundry][2], e junto com a [Nitis Office][4] empresa de coworking que gentilmente sedeu o escritório para que o evento pudesse acontecer de forma gratuita e mais uma vez, juntar a comunidade de desenvolvimento de software do Rio de Janeiro para trocar conhecimento.
 
-O evento aconteceu no último dia 18 de novembro de 2012, e para quem não pode ir, a aprensetação foi gravada e pode ser vista no video abaixo.
+O evento aconteceu no último dia 18 de outubro de 2012, e para quem não pode ir, a aprensetação foi gravada e pode ser vista no video abaixo.
 
 <p><iframe src="http://player.vimeo.com/video/52576884?badge=0" width="640" height="480" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 <p><a href="http://vimeo.com/52576884">Conhecendo o Cloud Foundry</a> from <a href="http://vimeo.com/rodrigoospinto">Rodrigo Pinto</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
