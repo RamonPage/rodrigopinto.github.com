@@ -4,7 +4,7 @@ title: Home
 ---
 
 	{% for post in site.posts %}
-  	<div class="post">
+  	<div class="header-post">
   		<div class="right">
       	<h2><a href="{{ post.url }}" style="float: left">{{ post.title }}</a></h2>
       	<span class="post-info" style="float: right">On {{ post.date | date: '%B %d, %Y' }}</span>
