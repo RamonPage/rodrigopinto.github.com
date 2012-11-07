@@ -611,6 +611,10 @@ ul.subscribe-stuff li img {
   font: 16px/180% 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif !important;
 }
 
+.post p {
+  margin: 20px 25px;
+}
+
 .right {
   width: 710px;
   float: right;
