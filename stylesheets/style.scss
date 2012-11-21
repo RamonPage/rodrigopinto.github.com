@@ -1,0 +1,92 @@
+/*/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/*/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+
+header.top {
+  border-top: solid 10px #01d49a;
+
+  h1, h2{
+    text-transform: uppercase;
+    text-align: center;
+  }
+  h1.logo {
+    font-family: 'GearedSlab';
+    padding: 50px;
+    font-size: 77pt;
+    color: #122b39;
+  }
+
+  h2.about {
+    width: 900px;
+    font-family: 'RobotoThin';
+    font-size: 35pt;
+    color: #01d49a;
+  }
+}
+
+
+header {
+}
+
+section.posts {
+  article.post {
+    border-bottom: solid 5px #d9ece5;
+
+    header h1 {
+      a, a:hover, a:active, a:visited {
+        text-decoration: none;
+        font-family: 'RobotoThin';
+        font-size: 30pt;
+        color: #122b39;
+      }
+    }
+  }
+}
+
+footer {
+  color: #FFF;
+  height: 150px;
+  background-color: #122b39;
+  text-transform: uppercase;
+
+  div {
+    padding: 40px;
+  }
+
+  nav ul {
+    text-align: center;
+
+    li {
+      display: inline;
+      font-family: 'RobotoThin';
+      font-size: 16pt;
+    }
+  }
+  p.copyright{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'RobotoThin';
+    font-size: 26pt;
+    color: #01d49a;
+  }
+}
