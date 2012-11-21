@@ -44,21 +44,50 @@ header.top {
   }
 }
 
-
-header {
-}
-
 section.posts {
   article.post {
-    border-bottom: solid 5px #d9ece5;
+    border-bottom: solid 2px #d9ece5;
 
-    header h1 {
-      a, a:hover, a:active, a:visited {
-        text-decoration: none;
-        font-family: 'RobotoThin';
-        font-size: 30pt;
-        color: #122b39;
+    ul.date {
+      list-style: none;
+      text-transform: uppercase;
+      color: #01d49a;
+
+      li {
+
+        &.day {
+          font-family: 'RobotoThin';
+          font-size: 42pt;
+        }
+
+        &.month {
+          font-family: 'RobotoBold';
+          font-size: 20pt;
+        }
+
+        &.year {
+          font-family: 'RobotoThin';
+          font-size: 18pt;
+        }
+    }
+
+    }
+
+
+    header {
+      h1 {
+        a, a:hover, a:active, a:visited {
+          text-decoration: none;
+          font-family: 'RobotoThin';
+          font-size: 30pt;
+          color: #122b39;
+        }
       }
+    }
+    section.description {
+      font-family: 'RobotoRegular';
+      font-size: 16pt;
+      color: #999;
     }
   }
 }

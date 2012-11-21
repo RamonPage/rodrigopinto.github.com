@@ -2,7 +2,7 @@
 <html lang='pt'>
   {% include head.html %}
   <body>
-    <header>
+    <header class="top">
       <div class="container">
         <h1 class="logo">Rodrigo Pinto</h1>
         <h2 class="about">
@@ -10,7 +10,8 @@
         </h2>
       </div>
     </header>
-    <section>
+    <section class="container posts">
+      {{ content }}
     </section>
     {% include footer.html %}
   </body>
