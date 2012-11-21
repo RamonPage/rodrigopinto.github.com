@@ -3,20 +3,18 @@ layout: default
 title: Home
 ---
 
-	{% for post in site.posts %}
-  	<div class="header-post">
-  		<div class="right">
-      	<h2><a href="{{ post.url }}" style="float: left">{{ post.title }}</a></h2>
-      	<span class="post-info" style="float: right">On {{ post.date | date: '%B %d, %Y' }}</span>
-      </div>
-      <div class="left">
-      	<p class="dateinfo">{{ post.date | date: '%b' }}<span>{{ post.date | date: '%d' }}</span></p>
-         	<div class="post-meta">
-            <h4>Post Info</h4>
-            <ul>
-              <li class="comment"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a></li>
-            </ul>
-		      </div>
-      </div>
-    </div>
-	{% endfor %}
+{% for post in site.posts %}
+  <article class="post">
+    <ul class="date">
+      <li class="day">{{ post.date | date: '%d' }}</li>
+      <li class="month">{{ post.date | date: '%b' }}</li>
+      <li class="year">{{ post.date | date: '%Y' }}</li>
+    </ul>
+    <header>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    </header>
+    <section class="description">
+      {{ post.description }}
+    </section>
+  </article>
+  {% endfor %}
