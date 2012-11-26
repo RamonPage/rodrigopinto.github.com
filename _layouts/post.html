@@ -1,33 +1,40 @@
 ---
 layout: default
 ---
-  <div class="header-post">
-    <div class="right">
-      <h2><a href="{{ page.url }}" style="float: left">{{ page.title }}</a></h2>
-      <span class="post-info" style="float: right">On {{ page.date | date: '%B %d, %Y' }}</span>
-    </div>
+<article class="post clearfix">
+  <ul class="date left">
+    <li class="day">{{ page.date | date: '%d' }}</li>
+    <li class="month">{{ page.date | date: '%b' }}</li>
+    <li class="year">{{ page.date | date: '%Y' }}</li>
+  </ul>
+  <div class="right post-content">
+    <header>
+      <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    </header>
   </div>
-  <div class="post">
-    {{ content }}
-  </div>
-  <div class="disqus_block">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      var disqus_developer = 0; // developer mode: 1 is on and 0 is off
+</article>
+<section class="description">
+  {{ content }}
+</section>
 
-        // The following are highly recommended additional parameters. Remove the slashes in front to use.
-        var disqus_shortname  = 'rodrigopinto';
-        var disqus_identifier  = '{{ page.url }}';
-      var disqus_url      = 'http://rodrigopinto.me{{ page.url }}';
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
+<div class="disqus_block">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_developer = 0; // developer mode: 1 is on and 0 is off
 
+      // The following are highly recommended additional parameters. Remove the slashes in front to use.
+      var disqus_shortname  = 'rodrigopinto';
+      var disqus_identifier  = '{{ page.url }}';
+    var disqus_url      = 'http://rodrigopinto.me{{ page.url }}';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
