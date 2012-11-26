@@ -18,7 +18,7 @@ Acredito que David Briant tenha sido apenas infeliz no exemplo que ele usou, ou 
   I realize that Aaron’s code is just an example for a slide at a conference, but I can tell you from experience, that any time an authoritative source shows code to others, they take that as the “right way” to do things...
 </blockquote>
 
-O fato é que *["desenvolvedores ruins"][6]* sempre levam opiniões e ideias de desenvolvedores formadores de opinião como verdade absoluta gravada em pedra, e tomam suas suas decisões de design de código baseados nisso sem opnião própria, ou por falta de conhecimento ou por falta de curiosidade; E como exemplo claro na comunidade temos é o conceito de **"Thin Controller, Fat Model"**, que é mal interpretado.
+O fato é que *["desenvolvedores ruins"][6]* sempre levam opiniões e ideias de desenvolvedores formadores de opinião como verdade absoluta gravada em pedra, e tomam suas suas decisões de design de código baseados nisso sem opinião própria, ou por falta de conhecimento ou por falta de curiosidade; E como exemplo claro na comunidade temos é o conceito de **"Thin Controller, Fat Model"**, que é mal interpretado.
 
 Poderia ir além com esse assunto, mas a reflexão que quero deixar é que qualquer decisão tem ônus e deve ter algum embasamento. Remover um callback para uma classe de serviço com uma interface bem definida e dizer que vai evitar efeito colateral em uma aplicação feita durante um Rails Rumble que dura dois dias, é puro preciosismo.
 
