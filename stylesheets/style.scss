@@ -73,6 +73,30 @@ header.top {
   }
 }
 
+section.social {
+
+  ul {
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+
+    li {
+      display: inline;
+      padding: 0 5px;
+
+      a {
+        padding-bottom: 18px;
+        padding-right: 3px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
 section.posts {
   article.post {
     border-bottom: solid 2px #d9ece5;
