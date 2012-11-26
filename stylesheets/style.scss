@@ -28,8 +28,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .container {
-  width: 960px;
   margin: 0 auto;
+  width: 80%;
 }
 
 .right {
@@ -53,15 +53,22 @@ header.top {
   }
   h1.logo {
     font-family: 'GearedSlab';
-    padding: 50px;
-    font-size: 77pt;
-    color: #122b39;
+    padding: 50px 0;
+    font-size: 6.3em;
+
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+      color: #122b39;
+      text-decoration: none;
+    }
   }
 
   h2.about {
-    width: 900px;
+    width: 100%;
     font-family: 'RobotoThin';
-    font-size: 35pt;
+    font-size: 2.6em;
     color: #01d49a;
   }
 }
@@ -81,17 +88,17 @@ section.posts {
 
         &.day {
           font-family: 'RobotoThin';
-          font-size: 42pt;
+          font-size: 42px;
         }
 
         &.month {
           font-family: 'RobotoBold';
-          font-size: 20pt;
+          font-size: 20px;
         }
 
         &.year {
           font-family: 'RobotoThin';
-          font-size: 18pt;
+          font-size: 18px;
         }
       }
     }
@@ -101,14 +108,14 @@ section.posts {
         a, a:hover, a:active, a:visited {
           text-decoration: none;
           font-family: 'RobotoThin';
-          font-size: 30pt;
+          font-size: 30px;;
           color: #122b39;
         }
       }
     }
     section.description {
-      font-family: 'RobotoRegular';
-      font-size: 16pt;
+      font-family: 'RobotoThin';
+      font-size: 16px;
       color: #999;
     }
 
@@ -120,7 +127,7 @@ section.posts {
 
 footer {
   color: #FFF;
-  height: 150px;
+  height: 135px;
   background-color: #122b39;
   text-transform: uppercase;
 
@@ -134,14 +141,30 @@ footer {
     li {
       display: inline;
       font-family: 'RobotoThin';
-      font-size: 16pt;
+      font-size: 1em;
+      padding: 2px 8px;
+      border-right: 1px solid #fff;
+
+      a, a:visited, a:active {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    }
+
+    li:last-child {
+      padding-right: none;
+      border-right: none;
     }
   }
   p.copyright{
     text-align: center;
     padding-top: 10px;
     font-family: 'RobotoThin';
-    font-size: 26pt;
+    font-size: 1.6em;
     color: #01d49a;
   }
 }
