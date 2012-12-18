@@ -67,7 +67,8 @@ header.top {
 
   h2.about {
     width: 100%;
-    font-family: 'RobotoThin';
+    font-family: 'Lato';
+    font-weight: 100;
     font-size: 2.6em;
     color: #01d49a;
   }
@@ -111,17 +112,20 @@ section.posts {
       li {
 
         &.day {
-          font-family: 'RobotoThin';
+          font-family: 'Lato';
+          font-weight: 100;
           font-size: 42px;
         }
 
         &.month {
-          font-family: 'RobotoBold';
+          font-family: 'Lato';
+          font-weight: 300;
           font-size: 20px;
         }
 
         &.year {
-          font-family: 'RobotoThin';
+          font-family: 'Lato';
+          font-weight: 100;
           font-size: 18px;
         }
       }
@@ -131,14 +135,16 @@ section.posts {
       h1 {
         a, a:hover, a:active, a:visited {
           text-decoration: none;
-          font-family: 'RobotoThin';
+          font-family: 'Lato';
+          font-weight: 300;
           font-size: 30px;;
           color: #122b39;
         }
       }
     }
     section.description {
-      font-family: 'RobotoThin';
+      font-family: 'Lato';
+      font-weight: 300;
       font-size: 16px;
       color: #999;
     }
@@ -164,7 +170,8 @@ footer {
 
     li {
       display: inline;
-      font-family: 'RobotoThin';
+      font-family: 'Lato';
+      font-weight: 100;
       font-size: 1em;
       padding: 2px 8px;
       border-right: 1px solid #fff;
@@ -187,7 +194,8 @@ footer {
   p.copyright{
     text-align: center;
     padding-top: 10px;
-    font-family: 'RobotoThin';
+    font-family: 'Lato';
+    font-weight: 100;
     font-size: 1.6em;
     color: #01d49a;
   }
