@@ -7,11 +7,7 @@ layout: default
     <li class="month">{{ page.date | date: '%b' }}</li>
     <li class="year">{{ page.date | date: '%Y' }}</li>
   </ul>
-  <div class="right post-content">
-    <header>
-      <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    </header>
-  </div>
+  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 </article>
 <article class="post-body">
   {{ content }}
