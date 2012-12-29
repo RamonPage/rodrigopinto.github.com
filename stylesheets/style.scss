@@ -41,6 +41,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   float: left;
 }
 
+@mixin font-post-content {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 20px;
+  color: #666;
+}
+
 /*/*====================*/
 /*=== Reset Styles ===*/
 /*====================*/
@@ -138,25 +145,37 @@ section.posts {
 
 
   article.post-body {
-    font-family: 'Lato';
-    font-weight: 300;
-    font-size: 20px;
-    color: #666;
-
+    .gist-file,
+    .disqus_block,
     p {
       margin-top: 1.2em;
     }
 
-    a,
-    a:hover,
-    a:visited,
-    a:active {
-      font-weight: 400;
-      color: #122B39;
-      text-decoration: none;
-      border-bottom: 1px dotted;
+    p {
+      @include font-post-content;
+
+      a,
+      a:hover,
+      a:visited,
+      a:active {
+        font-weight: 400;
+        color: #122B39;
+        text-decoration: none;
+        border-bottom: 1px dotted;
+      }
     }
 
+    pre.terminal {
+      margin: 1.2em;
+      background-color: #000;
+      font: bold 16px 'Monaco';
+      color: rgb(2, 190, 2);
+      border: 1px solid #CCC;
+      line-height: 19px;
+      overflow: auto;
+      padding: 6px 10px;
+      border-radius: 3px;
+    }
   }
 }
 
