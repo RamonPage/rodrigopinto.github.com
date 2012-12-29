@@ -1,154 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+---
+layout: default
+---
+<article class="post">
+  <header>
+    <ul class="date left">
+      <li class="day">{{ page.date | date: '%d' }}</li>
+      <li class="month">{{ page.date | date: '%b' }}</li>
+      <li class="year">{{ page.date | date: '%Y' }}</li>
+    </ul>
+    <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+  </header>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <div class="body">
+    {{ content }}
 
-<head>
-  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-  <meta name="author" content="Rodrigo Pinto" />
-  <meta content="Hi, dude! I'm Rodrigo Pinto, software developer from Rio de Janeiro, Brazil. I've been working on many web projects with ruby, rails, tdd, extreme programming and a bunch of cool stuffs for great customers. I hope the next can be with you." name="description">
-  <meta name="keywords" content="rodrigo pinto, ruby, rails, sofware development, agile, open source" />
-  <meta name="robots" content="index, follow, noarchive" />
-  <meta name="googlebot" content="noarchive" />
-  <title>{{ page.title }} - Rodrigo Pinto</title>
-<style type="text/css" media="all">
-  @import "/static/css/screen.css";
-</style>
-
-</head>
-
-<body>
-<div id="header-wrap">
-  <div id="header">
-    <a name="top"></a>
-
-    <h1 id="logo-text"><a href="/" title="">Rodrigo Pinto</a></h1>
-    <p id="slogan"></p>
-    <div  id="nav">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </div>
-    <p id="rss">
-      <a href="/atom.xml"></a>
-    </p>
+    {% include disqus.html %}
   </div>
-</div>
+</article>
 
-<div id="content-wrap" class="clear" >
-  <div id="content">
-    <div id="main">
-
-      <div class="header-post">
-        <div class="right">
-          <h2><a href="{{ page.url }}" style="float: left">{{ page.title }}</a></h2>
-          <span class="post-info" style="float: right">On {{ page.date | date: '%b %d, %Y' }}</span>
-        </div>
-      </div>
-      <div class="post">
-        {{ content }}
-      </div>
-      <div class="disqus_block">
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_developer = 0; // developer mode: 1 is on and 0 is off
-
-            // The following are highly recommended additional parameters. Remove the slashes in front to use.
-            var disqus_shortname  = 'rodrigopinto';
-            var disqus_identifier  = '{{ page.url }}';
-          var disqus_url      = 'http://rodrigopinto.me{{ page.url }}';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-              })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-      </div>
-
-    </div>
-
-    <div id="sidebar">
-      <div class="about-me">
-        <h3>About Me</h3>
-          <p>
-            <a href='#'>
-              <img src='http://www.gravatar.com/avatar/de89dceb54a28b2aa952663cc94d60fc?s=40' height='40' width='40' rel="nofollow" class='float-left' />
-            </a>
-            I am a passionate software developer, building better software driven by <a href="http://smallactsmanifesto.org">Small Acts.</a>
-        </p>
-      </div>
-      <div class="sidemenu social">
-        <h3>Find me at</h3>
-        <p>
-          <a href='http://github.com/rodrigopinto'>
-            <img src='/images/github_64.png' height='40' width='40' rel="nofollow" class='float-left' />
-          </a>
-          <a href='http://www.linkedin.com/in/rodrigoospinto'>
-            <img src='/images/linkedin_64.png' height='40' width='40' rel="nofollow" class='float-left' />
-          </a>
-          <a href='http://twitter.com/rodrigoospinto'>
-            <img src='/images/twitter_64.png' height='40' width='40' rel="nofollow" class='float-left' />
-          </a>
-        </p>
-      </div>
-      <div style="clear: both;"></div>
-      <div class="sidemenu">
-        <h3>#horaextra</h3>
-        {% include horaextra_blogroll.html %}
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div id="footer-outer" class="clear"><div id="footer-wrap">
-    <div class="col-a"></div>
-    <div class="col-a">
-    </div>
-    <div class="col-a"></div>
-    <div class="col-b"></div>
-  </div>
-</div>
-
-<div id="footer-bottom">
-  <p class="bottom-left">
-    &copy; 2010 <strong>Copyright Rodrigo Pinto</strong>&nbsp; &nbsp; &nbsp;
-    <a href="http://www.bluewebtemplates.com/" title="Website Templates">website templates</a> by <a href="http://www.styleshout.com/">styleshout</a>
-  </p>
-
-  <p class="bottom-right">
-    <a href="/">Home</a> |
-    <a href="/atom.xml">RSS Feed</a> |
-      <strong><a href="#top">Back to Top</a></strong>
-   </p>
-</div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'rodrigopinto'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-13130320-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
-</html>

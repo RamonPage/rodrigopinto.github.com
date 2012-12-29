@@ -1,0 +1,259 @@
+/*/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+.clearfix:before,
+.clearfix:after{
+    content:" ";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+.clearfix{
+    zoom:1;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 57.5em;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+@mixin font-post-content {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 18px;
+  color: #666;
+}
+
+blockquote {
+  margin: 10px 25px;
+  padding: 20px 20px 10px 45px;
+  border: 1px solid #F0F0F0;
+  background: #f8f8f8 url(/images/quote.gif) no-repeat 12px 12px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.5em;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, Serif;
+  color: #555;
+}
+
+/*/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+
+header.top {
+  border-top: solid 10px #01d49a;
+  background-image: url('/images/bg-topo.jpg');
+  background-repeat: repeat-x;
+
+  h1, h2{
+    text-transform: uppercase;
+    text-align: center;
+  }
+  h1.logo {
+    font-family: 'GearedSlab';
+    margin: 50px 0;
+    font-size: 5.0em;
+
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+      color: #122b39;
+      text-decoration: none;
+    }
+  }
+
+  h2.about {
+    width: 100%;
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size: 2.6em;
+    color: #01d49a;
+  }
+}
+
+section.social {
+
+  ul {
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+
+    li {
+      display: inline;
+      padding: 0 5px;
+
+      a {
+        padding-bottom: 18px;
+        padding-right: 3px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+section.posts {
+  margin-top: 1.5em;
+
+  article.post {
+    header {
+      border-bottom: solid 2px #d9ece5;
+      clear: both;
+      margin-bottom: 20px;
+
+      ul.date {
+        margin: 0 0 1.2em 0;
+        width: 160px;
+        list-style: none;
+        text-transform: uppercase;
+        color: #01d49a;
+
+        li {
+          display: inline;
+          font-family: 'Lato';
+          font-weight: 300;
+          font-size: 22px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 1.2em;
+        a, a:hover, a:active, a:visited {
+          text-decoration: none;
+          font-family: 'Lato';
+          font-weight: 400;
+          font-size: 22px;;
+          color: #122b39;
+        }
+      }
+
+    }
+
+    .body {
+      p, .gist-file {
+        margin-top: 1.2em;
+      }
+
+      p,
+      blockquote {
+        @include font-post-content;
+
+        line-height: 1.6;
+
+        a,
+        a:hover,
+        a:visited,
+        a:active {
+          font-weight: 400;
+          color: #122B39;
+          text-decoration: none;
+          border-bottom: 1px dotted;
+        }
+      }
+
+      pre.terminal {
+        margin: 1.2em;
+        background-color: #F0F0F0;
+        font: bold 16px 'Monaco';
+        color: rgb(2, 190, 2);
+        border: 1px solid #CCC;
+        line-height: 19px;
+        overflow: auto;
+        padding: 6px 10px;
+        border-radius: 3px;
+      }
+    }
+
+    .disqus_block {
+      margin-top: 1.2em;
+    }
+  }
+
+
+}
+
+footer {
+  color: #FFF;
+  height: 135px;
+  background-color: #122b39;
+  text-transform: uppercase;
+
+  div {
+    padding: 40px;
+  }
+
+  nav ul {
+    text-align: center;
+
+    li {
+      display: inline;
+      font-family: 'Lato';
+      font-weight: 100;
+      font-size: 1em;
+      padding: 2px 8px;
+      border-right: 1px solid #fff;
+
+      a, a:visited, a:active {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    }
+
+    li:last-child {
+      padding-right: none;
+      border-right: none;
+    }
+  }
+  p.copyright{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size: 1.6em;
+    color: #01d49a;
+
+    a,
+    a:visited,
+    a:active {
+      color: #01d49a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
