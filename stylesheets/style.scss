@@ -125,74 +125,80 @@ section.posts {
   margin-top: 1.5em;
 
   article.post {
-    border-bottom: solid 2px #d9ece5;
-    clear: both;
-    margin-bottom: 20px;
+    header {
+      border-bottom: solid 2px #d9ece5;
+      clear: both;
+      margin-bottom: 20px;
 
-    ul.date {
-      margin: 0 0 1.2em 0;
-      width: 160px;
-      list-style: none;
-      text-transform: uppercase;
-      color: #01d49a;
+      ul.date {
+        margin: 0 0 1.2em 0;
+        width: 160px;
+        list-style: none;
+        text-transform: uppercase;
+        color: #01d49a;
 
-      li {
-        display: inline;
-        font-family: 'Lato';
-        font-weight: 300;
-        font-size: 22px;
+        li {
+          display: inline;
+          font-family: 'Lato';
+          font-weight: 300;
+          font-size: 22px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 1.2em;
+        a, a:hover, a:active, a:visited {
+          text-decoration: none;
+          font-family: 'Lato';
+          font-weight: 400;
+          font-size: 22px;;
+          color: #122b39;
+        }
+      }
+
+    }
+
+    .body {
+      p, .gist-file {
+        margin-top: 1.2em;
+      }
+
+      p,
+      blockquote {
+        @include font-post-content;
+
+        line-height: 1.6;
+
+        a,
+        a:hover,
+        a:visited,
+        a:active {
+          font-weight: 400;
+          color: #122B39;
+          text-decoration: none;
+          border-bottom: 1px dotted;
+        }
+      }
+
+      pre.terminal {
+        margin: 1.2em;
+        background-color: #F0F0F0;
+        font: bold 16px 'Monaco';
+        color: rgb(2, 190, 2);
+        border: 1px solid #CCC;
+        line-height: 19px;
+        overflow: auto;
+        padding: 6px 10px;
+        border-radius: 3px;
       }
     }
 
-    h1 {
-      margin-bottom: 1.2em;
-      a, a:hover, a:active, a:visited {
-        text-decoration: none;
-        font-family: 'Lato';
-        font-weight: 400;
-        font-size: 22px;;
-        color: #122b39;
-      }
-    }
-  }
-
-
-  article.post-body {
-    .gist-file,
-    .disqus_block,
-    p {
+    .disqus_block {
       margin-top: 1.2em;
     }
-
-    p,
-    blockquote {
-      @include font-post-content;
-
-      line-height: 1.6;
-
-      a,
-      a:hover,
-      a:visited,
-      a:active {
-        font-weight: 400;
-        color: #122B39;
-        text-decoration: none;
-        border-bottom: 1px dotted;
-      }
-    }
-
-    pre.terminal {
-      margin: 1.2em;
-      background-color: #F0F0F0;
-      font: bold 16px 'Monaco';
-      color: rgb(2, 190, 2);
-      border: 1px solid #CCC;
-      line-height: 19px;
-      overflow: auto;
-      padding: 6px 10px;
-      border-radius: 3px;
-    }
   }
+
+
 }
 
 footer {
