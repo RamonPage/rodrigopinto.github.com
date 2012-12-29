@@ -48,6 +48,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   color: #666;
 }
 
+blockquote {
+  margin: 10px 25px;
+  padding: 20px 20px 10px 45px;
+  border: 1px solid #F0F0F0;
+  background: #f8f8f8 url(/images/quote.gif) no-repeat 12px 12px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.5em;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, Serif;
+  color: #555;
+}
+
 /*/*====================*/
 /*=== Reset Styles ===*/
 /*====================*/
@@ -151,7 +164,8 @@ section.posts {
       margin-top: 1.2em;
     }
 
-    p {
+    p,
+    blockquote {
       @include font-post-content;
 
       a,
@@ -167,7 +181,7 @@ section.posts {
 
     pre.terminal {
       margin: 1.2em;
-      background-color: #000;
+      background-color: #F0F0F0;
       font: bold 16px 'Monaco';
       color: rgb(2, 190, 2);
       border: 1px solid #CCC;
