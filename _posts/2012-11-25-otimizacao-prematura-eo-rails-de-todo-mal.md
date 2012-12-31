@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Otimização prematura é o "Rails" de todo mal
+date_pt_BR: 25 NOV 2012
 ---
 
 Ontem o [DHH][dhh] fez [um tweet][1] criticanto [um post][2] do David Briant, onde ele propõe alguns refactorings usando o conceito de [Single Responsability Principle][srp]. O tweet do [DHH][dhh] gerou uma [série][3] de [tweets][4] e [discussões][6] em [resposta][5]. As discussões são pertinentes e certamente  serão cada vez mais comums na comunidade Rails esse tipo de discussão, principalmente se levarmos em consideração que somos uma comunidade crescente em aplicações e profissionais.

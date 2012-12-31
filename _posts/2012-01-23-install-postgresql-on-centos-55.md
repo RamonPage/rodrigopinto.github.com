@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Install PostgreSQL on CentOS 5.5
+date_pt_BR: 23 JAN 2012
 ---
 
 #### DISCLAIMER

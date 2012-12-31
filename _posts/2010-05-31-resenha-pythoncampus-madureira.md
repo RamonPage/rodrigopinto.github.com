@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Resenha PythonCampus Madureira
+date_pt_BR: 31 MAI 2010
 ---
 
 No último sábado dia 29/05/2010, mais uma edição da **[PythonCampus](http://pythoncampus.org)** foi realizada, desta vez a universidade que sediou o evento foi a Estácio, no campus de Madureira.

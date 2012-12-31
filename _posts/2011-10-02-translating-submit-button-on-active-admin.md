@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Translating submit button on ActiveAdmin
+date_pt_BR: 02 OUT 2011
 ---
 
 Hi mate, this is my first english post and it will be about internationalization on active_admin gem.

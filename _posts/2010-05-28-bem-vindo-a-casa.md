@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Bem vindo a casa
+date_pt_BR: 28 MAI 2010
 ---
 
 Há algum tempo, venho postergando a idéia de criar um blog. No início era a desculpa de que não saberia o que escrever, depois foi o fato de "não ter tempo", e por fim a falta de priorização no meu dia a dia. 

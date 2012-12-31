@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Testando Factories para manter a sanidade
+date_pt_BR: 12 SET 2012
 ---
 
 Quem usa [FactoryGirl][fg] para testar aplicações, provavelmente já passou pela situação de adicionar uma validação nova em um model e quebrar boa parte do testes, e a primeira reação é FUUUUU!!!. As vezes você atenta e descobre rápido que era uma simples factory que deixou de ser válida, por não está de acordo com a nova validação, mas as vezes não, e você demora a entender e perde um tempo pra resolver isso. 

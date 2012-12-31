@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[video] Cloud Foundry Meetup"
+date_pt_BR: 01 NOV 2012
 tags:
   - cloud foundry
   - paas
