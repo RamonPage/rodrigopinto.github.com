@@ -69,7 +69,8 @@ header.top {
   }
   h1.logo {
     font-family: 'GearedSlab';
-    margin: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 30px;
     font-size: 5.0em;
 
     a,
@@ -82,10 +83,11 @@ header.top {
   }
 
   h2.about {
+    margin-bottom: 30px;
     width: 100%;
     font-family: 'Lato';
-    font-weight: 100;
-    font-size: 2.6em;
+    font-weight: 300;
+    font-size: 2.4em;
     color: #01d49a;
   }
 }
@@ -209,7 +211,7 @@ footer {
       display: inline;
       font-family: 'Lato';
       font-weight: 100;
-      font-size: 1em;
+      font-size: .8em;
       padding: 2px 8px;
       border-right: 1px solid #fff;
     }
@@ -219,12 +221,12 @@ footer {
       border-right: none;
     }
   }
-  p.copyright{
+  p.creative-commons{
     text-align: center;
     padding-top: 10px;
     font-family: 'Lato';
     font-weight: 100;
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: #01d49a;
 
     a,
