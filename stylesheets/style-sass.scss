@@ -1,33 +1,14 @@
-/************
-  MIXINS
-*************/
-@mixin font-post-content {
-  font-family: 'Lato';
-  font-weight: 300;
-  font-size: 18px;
-  color: #666;
+@charset "UTF-8";
+
+*{
+  margin:0;
+  padding:0;
+  text-rendering:optimizelegibility;
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased
 }
 
-
-.clearfix:before,
-.clearfix:after{
-    content:" ";
-    display:table;
-}
-
-.clearfix:after{
-    clear:both;
-}
-
-.clearfix{
-    zoom:1;
-}
-
-.container {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 57.5em;
-}
+html,body,div,h1,h2,h3,h4,ul,ol,li,form,fieldset,select,input,textarea,p,blockquote,figcaption,figure{margin:0;padding:0;font-size:100%;background:transparent}
 
 .right {
   float: right;
@@ -35,6 +16,12 @@
 
 .left {
   float: left;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 57.5em;
 }
 
 blockquote {
@@ -119,6 +106,11 @@ section.social {
 section.posts {
   margin-top: 1.5em;
 
+  img {
+    margin: 20px;
+    max-width: 900px;
+  }
+
   article.post {
     header {
       border-bottom: solid 2px #d9ece5;
@@ -135,7 +127,7 @@ section.posts {
         li {
           display: inline;
           font-family: 'Lato';
-          font-weight: 300;
+          font-weight: 500;
           font-size: 22px;
         }
       }
@@ -159,10 +151,11 @@ section.posts {
         margin-top: 1.2em;
       }
 
-      p,
-      blockquote {
-        @include font-post-content;
-
+      p, blockquote {
+        font-family: 'Lato';
+        font-weight: 500;
+        font-size: 18px;
+        color: #666;
         line-height: 1.6;
       }
 
@@ -183,8 +176,6 @@ section.posts {
       margin-top: 1.2em;
     }
   }
-
-
 }
 
 footer {
