@@ -106,12 +106,8 @@ section.social {
 section.posts {
   margin-top: 1.5em;
 
-  img {
-    margin: 20px;
-    max-width: 900px;
-  }
-
   article.post {
+
     header {
       border-bottom: solid 2px #d9ece5;
       clear: both;
@@ -147,6 +143,12 @@ section.posts {
     }
 
     .body {
+
+      img {
+        margin: 20px;
+        max-width: 900px;
+      }
+
       p, .gist-file {
         margin-top: 1.2em;
       }
