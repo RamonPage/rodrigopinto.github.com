@@ -33,7 +33,7 @@ end
 desc "preview the site in a web browser"
 task :preview do
   puts "Starting to watch source with Jekyll and Compass."
-  system "compass compile --sass-dir=sass/ --css-dir=stylesheets/ --output-style compressed" unless File.exist?("stylesheets/style.css")
+  system "compass compile --sass-dir=sass/ --css-dir=stylesheets/" unless File.exist?("stylesheets/style.css")
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
 
