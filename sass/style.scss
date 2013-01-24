@@ -1,27 +1,67 @@
 @charset "UTF-8";
 
-*{
+html,body,div,h1,h2,h3,h4,ul,ol,li,form,fieldset,select,input,textarea,p,blockquote,figcaption,figure {
+  font-size:100%;
+  background:transparent;
   margin:0;
   padding:0;
-  text-rendering:optimizelegibility;
-  -webkit-font-smoothing:antialiased;
-  font-smoothing:antialiased
 }
 
-html,body,div,h1,h2,h3,h4,ul,ol,li,form,fieldset,select,input,textarea,p,blockquote,figcaption,figure{margin:0;padding:0;font-size:100%;background:transparent}
-
-.right {
-  float: right;
+del {
+text-decoration:line-through;
 }
 
-.left {
-  float: left;
+hr {
+display:none;
 }
 
-.container {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 57.5em;
+ul,ol {
+list-style:none;
+}
+
+img, fieldset {
+border:none;
+}
+
+h1,h2,h3,h4 {
+font-weight:400;
+}
+
+em {
+font-style:italic;
+}
+
+strong {
+font-weight:700;
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+display:block;
+}
+
+abbr[title],dfn[title] {
+cursor:help;
+border-bottom:1px dotted;
+}
+
+pre,code {
+font-family:monospace;
+}
+
+body {
+font-size:100%;
+line-height:1.25;
+font-family:Lato,Helvetica,Arial,sans-serif;
+color:#2e2633;
+}
+
+a {
+  color: #122B39;
 }
 
 blockquote {
@@ -37,12 +77,18 @@ blockquote {
   color: #555;
 }
 
-a,
-a:hover,
-a:visited,
-a:active {
-  font-weight: 400;
-  color: #122B39;
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 57.5em;
 }
 
 header.top {
