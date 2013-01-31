@@ -1,17 +1,30 @@
----
-layout: default
----
-<article class="post">
-  <header>
-    <ul class="date left">
-      <li>{{ page.date_pt_BR }}</li>
-    </ul>
-    <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-  </header>
+<!DOCTYPE html>
+<html lang='pt'>
+  {% include head.html %}
+  <body>
+    <header class="top">
+      <div class="container">
+        <h1 class="logo"><a href="/">Rodrigo Pinto</a></h1>
+        <h2>{{ page.title }}</h2>
+        <p class="date">
+          {{ page.date_pt_BR }}
+        </p>
+      </div>
+    </header>
 
-  <div class="body">
-    {{ content }}
-  </div>
-  {% include disqus.html %}
-</article>
+    <section class="container posts">
+      <article class="post">
+        <div class="body">
+          {{ content }}
+        </div>
+        {% include disqus.html %}
+      </article>
 
+      {% include social.html %}
+    </section>
+
+    {% include footer.html %}
+  </body>
+
+  {% include analytics.html %}
+</html>
