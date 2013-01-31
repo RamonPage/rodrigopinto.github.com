@@ -115,7 +115,7 @@ header.top {
     }
   }
 
-  h2.about {
+  h2 {
     margin-bottom: 30px;
     width: 100%;
     font-family: 'Lato';
@@ -123,10 +123,19 @@ header.top {
     font-size: 2.4em;
     color: #01d49a;
   }
+
+  p.date {
+    border-bottom: solid 2px #d9ece5;
+    margin: 0 auto 1.2em;
+    padding-bottom: 1.2em;
+    width: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #01d49a;
+  }
 }
 
 section.social {
-
   ul {
     margin: 0 auto;
     padding: 20px 0;
